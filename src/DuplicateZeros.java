@@ -30,7 +30,8 @@ public class DuplicateZeros {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{8,4,5,0,0,0,0,7};
+//        int[] arr = new int[]{8,4,5,0,0,0,0,7};
+        int[] arr = new int[]{1,0,2,3,0,4,5,0};
         duplicateZeros(arr);
         System.out.println(Arrays.toString(arr));
     }
