@@ -66,6 +66,32 @@ public class MyLinkedList {
         return head;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void deleteFirst() {
         if (head == null) return;
         if (head.next != null) {
