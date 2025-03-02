@@ -10,22 +10,22 @@ public class Q15_3Sum {
 
         System.out.println(Arrays.toString(nums));
 
-        for (int i = 0; i < n-1; i++) {
-            if (nums[i] == nums[i + 1]) continue;
+        for (int i = 0; i < n - 2; i++) {
+            if ( i>0 && nums[i] == nums[i - 1]) continue;
             int j = i + 1, k = n - 1;
             while (j < k) {
-            int sum = nums[i] + nums[j] + nums[k];
-                ArrayList<Integer> arr = new ArrayList<>();
+
+                System.out.println(Arrays.asList(nums[i], nums[j], nums[k]));
+                int sum = nums[i] + nums[j] + nums[k];
                 if (sum == 0) {
-                    arr.add(nums[i]);
-                    arr.add(nums[j]);
-                    arr.add(nums[k]);
-                    if (!result.contains(arr)) result.add(arr);
+                    List<Integer> arr = Arrays.asList(nums[i], nums[j], nums[k]);
+                    if (result.indexOf(arr) == -1) result.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     j++;
+                    while (nums[j] == nums[j - 1]) j++;
                 } else if (sum < 0) {
-                     j++;
+                    j++;
                 } else {
-                     k--;
+                    k--;
                 }
             }
         }
